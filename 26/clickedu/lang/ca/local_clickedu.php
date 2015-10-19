@@ -28,7 +28,7 @@ $string['noauthorization'] = '
 Per raons de seguretat, perquè la sincronització sigui acceptada ha
 d\'accedir a <a href="{$a}" target="_blank">Clickedu</a> des del seu
 ordinador i concedir-li permisos d\'accés a través de la icona
-"Connexions externes" (menú superior dret). Un cop fet això, l\'estat
+"Autoritzacions" (menú superior dret). Un cop fet això, l\'estat
 de l\'autorització passarà de "pendent" a "acceptat" i quan accedeixi
 de nou a la plataforma Moodle les seves dades s\'hi carregaran.';
 

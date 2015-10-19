@@ -34,7 +34,7 @@ $string['authenticationdesc'] = 'Please enter your username and password from Cl
 $string['noauthorization'] = '
 For security reasons, to accept the synchronization you need to access
 <a href="{$a}" target="_blank">Clickedu</a> from your computer and
-grant access permissions under the icon "External links" (on the top
+grant access permissions under the icon "Authorizations" (on the top
 right corner). Then, the status of the authorization will change from
 "pending" to "accepted" and, the next time you log in using the Moodle
 platform, your data will be loaded.';
