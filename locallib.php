@@ -878,6 +878,7 @@ function clickedu_create_users(array $users, progress_bar $progress) {
     foreach ($users as $user) {
         $user->mnethostid = $CFG->mnet_localhost_id;
         $user->confirmed = true;
+        $user->lang = $CFG->lang;
         $user->password = generate_password();
         $id = user_create_user(clone($user), true);
         set_user_preference('auth_forcepasswordchange', 1, $id);
