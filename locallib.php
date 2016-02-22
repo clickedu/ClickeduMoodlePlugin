@@ -611,8 +611,10 @@ function clickedu_sync_contents(stdClass $course, array $contents, progress_bar 
 
         // Lista de mòdulos actuales de la sección
         $cms = array();
-        foreach (explode(',', $section->sequence) as $cmid) {
-            $cms[$cmid] = $DB->get_record('course_modules', array('id' => $cmid));
+        if(!empty($section->sequence)) {
+            foreach (explode(',', $section->sequence) as $cmid) {
+                $cms[$cmid] = $DB->get_record('course_modules', array('id' => $cmid));
+            }
         }
         $cm = reset($cms);
 
