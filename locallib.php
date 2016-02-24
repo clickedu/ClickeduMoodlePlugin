@@ -611,8 +611,10 @@ function clickedu_sync_contents(stdClass $course, array $contents, progress_bar 
 
         // Lista de mòdulos actuales de la sección
         $cms = array();
-        foreach (explode(',', $section->sequence) as $cmid) {
-            $cms[$cmid] = $DB->get_record('course_modules', array('id' => $cmid));
+        if(!empty($section->sequence)) {
+            foreach (explode(',', $section->sequence) as $cmid) {
+                $cms[$cmid] = $DB->get_record('course_modules', array('id' => $cmid));
+            }
         }
         $cm = reset($cms);
 
@@ -876,6 +878,7 @@ function clickedu_create_users(array $users, progress_bar $progress) {
     foreach ($users as $user) {
         $user->mnethostid = $CFG->mnet_localhost_id;
         $user->confirmed = true;
+        $user->lang = $CFG->lang;
         $user->password = generate_password();
         $id = user_create_user(clone($user), true);
         set_user_preference('auth_forcepasswordchange', 1, $id);
