@@ -11,4 +11,4 @@ MOODLE_31_STABLE -> versió moodle 3.1.x
 
 MOODLE_32_STABLE -> versió moodle 3.2.x
 
-MOODLE_33_STABLE -> versió moodle 3.3.x
+MOODLE_33_STABLE -> versió moodle 3.3.x i 3.4.x
