@@ -1,16 +1,10 @@
-# ClickeduMoodlePlugin
-Conexi贸 de Clickedu cap a Moodle
+Plugin local Clickedu (Moodle 3.6)
+==================================
 
-Branques:
+Este plugin integra Moodle con la plataforma Clickedu.
 
-MOODLE_26_STABLE -> versi贸 moodle 2.6.x
-
-MOODLE_28_STABLE -> versi贸 moodle 2.8.x
-
-MOODLE_31_STABLE -> versi贸 moodle 3.1.x
-
-MOODLE_32_STABLE -> versi贸 moodle 3.2.x
-
-MOODLE_33_STABLE -> versi贸 moodle 3.3.x i 3.4.x
-
-MOODLE_35_STABLE -> versi贸 moodle 3.5.x
+- Creaci髇 de usaurios
+- Sincronizaci髇 de cursos
+- Sincronizaci髇 de contenidos
+- Web service de calificaciones
+- Single Sign-On desde Clickedu
