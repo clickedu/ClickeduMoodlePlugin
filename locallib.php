@@ -913,6 +913,21 @@ function clickedu_sync_courses(array $courses, progress_bar $progress) {
                 local_clickedu_add_debug('debug:coursenoidcreated', 'local_clickedu', $course->id);
             }
             $progress->update($cur++, $total, $msg);
+            
+        }else{
+            /*Recuperamos la fila que contiene los datos del cgap que llega des de clickedu*/
+            $objectCourse = $DB->get_record('course', array('idnumber' => $course->idnumber), '*');
+            if (is_object($objectCourse) && !empty($objectCourse)) {
+
+                //Creamos un objeto para actualizar los nombres
+                $newNameCourse = (object) [
+                    'id' => (string) $objectCourse->id, //id primary que llega de la query del cgap en moodle
+                    'shortname' => (string) $course->shortname, //nombre corto
+                    'fullname' => (string) $course->fullname //nombre largo
+                ];
+
+                $DB->update_record('course', $newNameCourse); //Update
+            }
         }
 
         if ($config->advdebug) {
