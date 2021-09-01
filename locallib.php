@@ -850,13 +850,15 @@ function clickedu_sync_contents_module($course, $section, $idnumber, $modulecont
 function clickedu_sync_courses(array $courses, progress_bar $progress) {
     global $CFG, $DB;
 
-    $ce = $course->ce;
+    
 
     $config = get_config('local_clickedu');
 
     $msg = get_string('syncingcourses', 'local_clickedu');
     $total = 1;
     foreach ($courses as $course) {
+        $ce = $course->ce;
+        
         if (!$course->id) {
             $total++; // create course
         }
