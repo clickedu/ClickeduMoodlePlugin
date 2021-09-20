@@ -341,6 +341,8 @@ function clickedu_get_new_users() {
 
     $users = array();
 
+    $users['code_school'] = $result['codi_escola'];
+
     foreach ($result as $user) {
         if (empty($user['id']) or
             empty($user['username']) or
@@ -1225,6 +1227,7 @@ function clickedu_create_users(array $users, progress_bar $progress) {
         if ($config->advdebug) {
             local_clickedu_add_debug('debug:syncusersemail', 'local_clickedu', $id);
         }
+        if($users['code_school'] != '08038673') {
         if (!empty($user->email)) {
             $record = $DB->get_record('user', array('id' => $id));
             //##
@@ -1233,6 +1236,7 @@ function clickedu_create_users(array $users, progress_bar $progress) {
             }
             clickedu_send_password($record, $user->password);
         }
+    }
         $progress->update($cur, $total, $msg);
         $cur++;
     }
