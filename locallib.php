@@ -1213,6 +1213,8 @@ function clickedu_create_users(array $users, progress_bar $progress) {
     }
 
     foreach ($users as $user) {
+        /* maguilera: Hago una comprobación porque al pasar el codigo del colegio por WS el primer indice ya no es un object(user)*/
+        if(!empty($user) && is_object($user)){
         $user->mnethostid = $CFG->mnet_localhost_id;
         $user->confirmed = true;
         $user->password = generate_password();
@@ -1239,6 +1241,7 @@ function clickedu_create_users(array $users, progress_bar $progress) {
     }
         $progress->update($cur, $total, $msg);
         $cur++;
+  }
     }
 
     //##
