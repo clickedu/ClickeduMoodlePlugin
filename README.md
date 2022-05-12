@@ -1,4 +1,4 @@
-Plugin local Clickedu (Moodle 3.6+)
+Plugin local Clickedu (Moodle 4.0)
 ==================================
 
 Compatibilidad con Moodle 4.0.
