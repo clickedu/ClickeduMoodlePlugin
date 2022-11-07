@@ -68,6 +68,9 @@ class local_clickedu_external extends external_api {
 
         $gradeparams = array('courseid' => $course->id, 'itemtype' => 'mod');
         foreach (grade_item::fetch_all($gradeparams) as $gradeitem) {
+
+            if(strpos($gradeitem->itemmodule, 'h5p') === false) {
+                
             $cm = get_coursemodule_from_instance(
                 $gradeitem->itemmodule, $gradeitem->iteminstance, 0, true, MUST_EXIST);
             if (!isset($activities[$cm->id])) {
@@ -96,6 +99,7 @@ class local_clickedu_external extends external_api {
                     'idnumber' => $gradeitem->idnumber ?: '',
                 );
             }
+         }
         }
 
         return $activities;
