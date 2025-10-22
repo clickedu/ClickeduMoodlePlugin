@@ -17,4 +17,4 @@ MOODLE_35_STABLE -> versió moodle 3.5.x
 
 MOODLE_36_STABLE -> versió moodle 3.6.x - 3.10
 
-MOODLE_40_STABLE -> versió moodle 4.0.x
+MOODLE_40_STABLE -> versió moodle 4.0.x - 4.5
